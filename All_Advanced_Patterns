@@ -1,0 +1,203 @@
+import java.util.*;
+class Main {
+// INVERTED TRIANGLE
+   public static void invertedTriangle(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1; j<=n-i+1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+// HALF PYRAMID
+    public static void halfPyramid(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1; j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+// CHARACTER PATTERN
+    public static void character(int n){
+        char count = 'A';
+        for(int i = 1;i<=n;i++){
+            for(int j = 1; j<=i;j++){
+                System.out.print(count);
+                count++;
+            }
+            System.out.println();
+        }
+    }
+
+// HOLLOW RECTANGLE
+    public static void hollowRectangle(int a, int b){
+        for(int i = 1;i<=a;i++){
+            for(int j = 1;j<=b;j++){
+                if(i==1||i==a||j==1||j==b){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+// INVERTED AND ROTATED HALF PYRAMID
+    public static void invertedAndRotatedHalfPyramid(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            for(int j = 1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+// INVERTED HALF PYRAMID
+    public static void invertedHalfPyramid(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=n-i+1;j++){
+                System.out.print(j);
+            }
+            
+            System.out.println();
+        }
+    }
+// FLOYD'S TRIANGLE
+    public static void floydsTriangle(int n){
+        int count = 1;
+        for (int i = 1;i<=n;i++){
+            for (int j = 1;j<=i;j++){
+                System.out.print(count);
+                count++;
+            }
+            System.out.println();
+        }
+    }
+// ZERO _ ONE PATTERN
+    public static void zeroOnePattern(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=i;j++){
+                if((i+j)%2==0){
+                    System.out.print(1);
+                }
+                else{
+                    System.out.print(0);
+                }
+            }
+            System.out.println();
+        }
+    }
+// BUTTERFLY PATTERN
+    public static void butterflyPattern(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=i;j++){
+                System.out.print("*");
+            }
+            for(int j = 1;j<=2*(n-i);j++){
+                System.out.print(" ");
+            }
+            for(int j = 1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i = n;i>=1;i--){
+            for(int j = 1;j<=i;j++){
+                System.out.print("*");
+            }
+            for(int j = 1;j<=2*(n-i);j++){
+                System.out.print(" ");
+            }
+            for(int j = 1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+// SOLID PARLLELOGRAM
+    public static void solidParllelogramPattern(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            for(int j = 1;j<=n;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+// HOLLOW PARLLELOGRAM
+    public static void hollowParllelogramPattern(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            for(int j = 1;j<=n;j++){
+                if(i==1||i==n||j==1||j==n){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+// SOLID DIAMOND PATTERN
+    public static void solidDiamondPattern(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            for(int j = 1;j<=2*i-1;j++){
+               System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i = n;i>=1;i--){
+            for(int j = 1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            for(int j = 1;j<=2*i-1;j++){
+               System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter num:");
+        int num = sc.nextInt();
+        System.out.println("Enter no of columns:");
+        int num2 = sc.nextInt();
+        System.out.println("-------------------------------");
+        halfPyramid(num);
+        System.out.println("-------------------------------");
+        invertedTriangle(num);
+        System.out.println("-------------------------------");
+        character(num);
+        System.out.println("-------------------------------");
+        hollowRectangle(num,num2);
+         System.out.println("-------------------------------");
+        invertedAndRotatedHalfPyramid(num);
+         System.out.println("-------------------------------");
+        invertedHalfPyramid(num);
+         System.out.println("-------------------------------");
+        floydsTriangle(num);
+        System.out.println("-------------------------------");
+        zeroOnePattern(num);
+         System.out.println("-------------------------------");
+        butterflyPattern(num);
+         System.out.println("-------------------------------");
+        solidParllelogramPattern(num);
+         System.out.println("-------------------------------");
+        hollowParllelogramPattern(num);
+         System.out.println("-------------------------------");
+        solidDiamondPattern(num);
+         System.out.println("-------------------------------");
+    }
+}
